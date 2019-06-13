@@ -15,7 +15,10 @@ export class RestaurantsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.restaurants = this.restaurantService.restaurants()
+    // atribui o que veio da RESPONSE no service para o objeto de restaurantes daqui
+    // faz uma requisicao HTTP
+    this.restaurantService.restaurants()
+        .subscribe(restaurants => this.restaurants = restaurants)
   }
 
 }
