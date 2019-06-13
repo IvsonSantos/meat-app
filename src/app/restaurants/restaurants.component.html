@@ -8,8 +8,8 @@
 <section class="content">
 
   <div class="row">
-          <div class="col-sm-6 col-xs-12">
-            <mt-restaurant></mt-restaurant>
+          <div class="col-sm-6 col-xs-12" *ngFor="let restaurant of restaurants">
+            <mt-restaurant [restaurant]="restaurant"></mt-restaurant>
           </div>
           <!-- /.col -->
   </div>
